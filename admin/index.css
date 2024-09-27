@@ -1,0 +1,207 @@
+:root{
+    --primaryColor: #0e6253;
+    --secondaryColor: #ffc107;
+    --whiteColor: #fff;
+    --blackColor: #222;
+    --softGreenColor: #d9f2ee;
+    --darkGreyColor: #a7a7a7;
+    --greyColor: #f5f5f5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.sidebar{
+    height: 100%;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2%;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+}
+
+.sidebar-menus{
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-menus a , .sidebar-logout a{
+    padding: 5% 8%;
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--whiteColor);
+}
+
+.sidebar-menus a ion-icon , .sidebar-logout a ion-icon{
+    font-size: 20px;
+}
+
+.sidebar-menus a:hover , .sidebar-logout a:hover{
+    background-color: var(--secondaryColor);
+    border-radius: 50px;
+}
+
+.main{
+    width: 100%;
+    height: max-content;
+    min-height: 100vh;     /* màu xanh toàn bộ màng hình */
+    padding: 2%;
+    background-color: #6B8A7A;
+    margin-left: 250px;
+}
+
+.main-navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* làm icon tìm ... chuyển thành hàng ngang */
+
+.menu-toggle {
+    display: none;
+}
+.search{
+    width: 60%;
+    height: 40px;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--whiteColor);
+    border-radius: 20px;
+}
+
+.search input{
+    width: 80%;
+    height: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+.search-btn{
+    background-color: var(--secondaryColor);
+    color: var(--whiteColor);
+    border: none;
+    border-radius: 20px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.search:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.search-btn:hover{
+    background-color: var(--primaryColor);
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.profile .cart, .user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--whiteColor);
+    font-size: 20px;
+    color: var(--primaryColor);
+    text-decoration: none;
+    padding: 0 10px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.cart:hover, .user:hover{
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+} 
+
+.main-highlight{
+    margin: 3% 0;
+    padding: 2%;
+    background-color: var(--softGreenColor);
+    border-radius: 8px;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
+/* chuyển các khối div cards thành hàng ngang */
+
+.card-single{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 5px;
+}
+/* chuyển icon lên trên ngang hàng vs h1 */
+
+.card-single div:last-child span{
+    font-size: 2rem;
+    color: var(--primaryColor);
+}
+
+.card-single div:first-child span{
+    color: var(--secondaryColor);
+}
+
+/* chuyển khối sau cùng đổi màu nền và màu chữ */
+.card-single:last-child{
+    background-color: var(--primaryColor);
+}
+
+.card-single:last-child h1,
+.card-single:last-child div:first-child span,
+.card-single:last-child div:last-child span{
+    color: #fff;
+}
+
+.chart-grid{
+    display: grid;
+    grid-template-columns: 64% auto;
+    margin-top: 3rem;
+    grid-gap: 4rem;
+}
+/* chuyển sơ đồ vòng tròn lên ngang sơ đồ kia */
+
+.chart-follow, .chart-sales{
+    padding: 1rem;
+    background: #99CC99;
+    border-radius: 5px;
+}
+
+.chart-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #efefef;
+}
+
+
